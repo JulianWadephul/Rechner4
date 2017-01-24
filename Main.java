@@ -1,5 +1,5 @@
 import Prog1Tools.IOTools;
-import SimpleMath;
+
 
 public class Main {
 
@@ -8,14 +8,20 @@ public class Main {
 		double wert1 = IOTools.readDouble("Double: ");
 		char operator = IOTools.readChar("Char: ");
 		double wert2 = IOTools.readDouble("Double: ");
-		double wert3;
+		double wert3 = 0;
 		
 		switch(operator){
 			case '*': wert3 = SimpleMath.multiply(wert1,wert2);
+			break;
 			case ':': wert3 = SimpleMath.divide(wert1,wert2);
-			case '-': wert3 = SimpleMath.subtract(wert1,wert2);
-			case '+': wer3 = SimpleMath.add(wert1,wert2);
+			break;
+			case '-': wert3 = SimpleMath.substract(wert1,wert2);
+			break;
+			case '+': wert3 = SimpleMath.add(wert1,wert2);
+			break;
 		}
+
+		System.out.println("Ergebnis: "+wert3);
 	}
 
 }
